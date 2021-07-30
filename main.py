@@ -72,6 +72,7 @@ Longitude : `{longitude}`
 Recovered : `{recovered}`
 
 Made by @SH_Bots"""
+        print(covid_info)
         return covid_info
     except Exception as error:
         return error

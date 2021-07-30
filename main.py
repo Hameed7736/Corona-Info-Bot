@@ -25,17 +25,17 @@ BUTTONS = InlineKeyboardMarkup(
 
 @SH_Bots.on_message(filters.command("[start]"))
 async def start(bot, update):
-  text = START_TEXT.format(update.from_user.mention)
-  reply_markup = BUTTONS
-  await update.reply_text(
-    text=text,
-    disable_web_page_preview=True,
-    reply_markup=reply_markup,
-    quote=True
-  )
+    text = START_TEXT.format(update.from_user.mention)
+    reply_markup = BUTTONS
+    await update.reply_text(
+      text=text,
+      disable_web_page_preview=True,
+      reply_markup=reply_markup,
+      quote=True
+    )
   
-  @SH_Bots.on_message(filters.private & filters.text)
-  async def reply_info(bot, update):
+@SH_Bots.on_message(filters.private & filters.text)
+async def reply_info(bot, update):
     country = update.text.replace(" ", "+").lower()
     reply_markup = BUTTONS
     await update.reply_text(
@@ -71,7 +71,6 @@ Latitude : `{latitude}`
 Longitude : `{longitude}`
 Recovered : `{recovered}`
 
-Made by @SH_Bots
-"""
+Made by @SH_Bots"""
 
-SH_Bots.run
+SH_Bots.run(

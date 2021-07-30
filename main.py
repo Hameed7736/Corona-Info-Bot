@@ -74,4 +74,4 @@ Recovered : `{recovered}`
 Made by @SH_Bots
 """
 
-SH_Bots.()
+SH_Bots.run()

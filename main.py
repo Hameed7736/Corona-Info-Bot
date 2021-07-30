@@ -45,8 +45,8 @@ async def reply_info(bot, update):
       reply_markup=reply_markup
     )
     
-    async def covid_info(country_name):
-      try:
+async def covid_info(country_name):
+    try:
         r = requests.get(API + country_name)
         info = r.json()
         country = info['country']
@@ -72,5 +72,8 @@ Longitude : `{longitude}`
 Recovered : `{recovered}`
 
 Made by @SH_Bots"""
+        return covid_info
+    except Exception as error:
+        return error
 
 SH_Bots.run()

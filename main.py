@@ -74,4 +74,4 @@ Recovered : `{recovered}`
 Made by @SH_Bots
 """
 
-FayasNoushad.run()
+SH_Bots.()
